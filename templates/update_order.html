@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% extends 'admin.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>update order</title>
+</head>
+
+<body>
+{% block content %}
+<ul>
+  <li><a class="active" href="{{ url_for('admin') }}">Home</a></li>
+  <li><a href="{{ url_for('admin_accounts') }}">Accounts</a></li>
+  <li><a href="{{ url_for('admin_items') }}">Items</a></li>
+  <li style="float:right"><a href="#">Logout</a></li>
+</ul>
+
+
+<div class="sidebar">
+  <a href="{{ url_for('admin') }}">Admin</a>
+  <a href="{{ url_for('admin_orders') }}">Orders</a>
+  <a class="active" href="{{ url_for('admin_update_order') }}">Update Order</a>
+  <a href="{{ url_for('admin_delete_orders') }}">Delete Orders</a>
+
+</div>
+
+<div class="content">
+  <h1>update orders</h1>
+
+
+<h1></h1>
+
+<table id="admin">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_table.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/update_button.css') }}">
+
+  <tr>
+  	<th>Customer ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Address</th>
+    <th>Mobile Number</th>
+    <th>Items</th>
+    <th>Update</th>
+  </tr>
+  <tr>
+    <td>001</td>
+    <td>chamith</td>
+    <td>sharantha</td>
+    <td>12/3 nittambuwa</td>
+    <td>0762851650</td>
+    <td>012/002/008/0011</td>
+    <td><center><button class="button">Update</button></center></td>
+  <tr>
+  <td>002</td>
+    <td>kamal</td>
+    <td>perera</td>
+    <td>45 nittambuwa</td>
+    <td>0762851650</td>
+    <td>001/002/005/0011</td>
+    <td><center><button class="button">Update</button></center></td>
+  </tr>
+  <tr>
+  <td>002</td>
+    <td>nimal</td>
+    <td>perera</td>
+    <td>156 nittambuwa</td>
+    <td>0702351650</td>
+    <td>001/002/005/0011</td>
+    <td><center><button class="button">Update</button></center></td>
+  </tr>
+
+</table>
+
+</div>
+
+
+</div>
+
+
+
+
+{% endblock %}
+</body>
+</html>

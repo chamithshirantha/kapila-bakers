@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register_form_style.css') }}">
+</head>
+<body><br><br>
+    <div>
+    <div style="text-align: center;"><h3>Customer Registration</h3></div>
+        <table>
+        <form action="{{ url_for('register') }}" method="post">
+         <tr>
+             <th colspan="3"><div class="msg">{{ msg }}</div></th>
+         </tr>
+
+        <tr>
+        <th><label>User Name</label></th>
+        <td>:</td>
+        <td><input type="text" id="username" name="username" placeholder="Enter your user name.."></td>
+        </tr>
+
+
+        <tr>
+        <th><label>First Name</label></th>
+        <td>:</td>
+        <td><input type="text" id="firstname" name="firstname" placeholder="Enter your first name.."></td>
+        </tr>
+
+        <tr>
+       	<th><label>Last Name</label></th>
+        <td>:</td>
+        <td><input type="text" id="lastname" name="lastname" placeholder="Enter your last name.."></td>
+        </tr>
+
+        <tr>
+        <th><label>Email Address</label></th>
+        <td>:</td>
+        <td><input type="text" id="emailaddress" name="emailaddress" placeholder="Enter your email address.."></td>
+        </tr>
+
+        <tr>
+        <th><label>Password</label></th>
+        <td>:</td>
+        <td><input type="password"  id="password" name="password" placeholder="Enter your password.."></td>
+        </tr>
+
+
+        <tr>
+        <th><label>Address</label></th>
+        <td>:</td>
+        <td><input type="text" id="address" name="address" placeholder="Enter your address.."></td>
+        </tr>
+
+            <tr>
+        <th><label>Mobile Number</label></th>
+        <td>:</td>
+        <td><input type="text" id="mobile_number" name="mobile_number" placeholder="Enter your mobile number.."></td>
+        <tr>
+
+
+        <tr>
+        <th></th>
+        <td></td>
+        <td><input type="submit" class="button" value="Register"></td>
+        </tr>
+
+        </form>
+        </table>
+        <div style="font-family: cursive;"><p>Already have an account?  <a href="{{url_for('login')}}"> Sign In here</a></p></div>
+    </div>
+</body>
+</html>
